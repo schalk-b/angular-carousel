@@ -26,7 +26,7 @@ images: [url7, url8]
 This provides the functionality to display multiple blocks in a carousel as per the requirements.
 
 #### Performance
-This is intented to support a reasonable amount of blocks (around 10,000 should work fine). It achieves this performance by only eager loading the images for the current slide and the next slide.
+This is intented to support a reasonable amount of blocks (around 10,000 should work fine). It achieves this performance by only eager loading the images for the current slide and the next slide. The rest are lazy loaded as they are needed.
 
 Further improvements can be made to support an infinte amount of blocks by:
 - Server-side paging
