@@ -1,4 +1,4 @@
-# Considerations
+# Demo
 [Demo](https://schalk-b.github.io/angular-carousel/)
 
 # AngularCarousel
