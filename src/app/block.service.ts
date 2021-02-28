@@ -21,11 +21,11 @@ export class BlockService {
       blocks.push({
         title: `Block ${i}`,
         images: [
-          `https://via.placeholder.com/250x250/003049/FFFFFF/?text=${this.randomText()}`,
-          `https://via.placeholder.com/250x250/D62828/FFFFFF/?text=${this.randomText()}`,
-          `https://via.placeholder.com/250x250/F77F00/FFFFFF/?text=${this.randomText()}`,
-          `https://via.placeholder.com/250x250/FCBF49/FFFFFF/?text=${this.randomText()}`,
-          `https://via.placeholder.com/250x250/EAE2B7/FFFFFF/?text=${this.randomText()}`,
+          `https://via.placeholder.com/250x150/003049/FFFFFF/?text=${this.randomText()}`,
+          `https://via.placeholder.com/250x150/D62828/FFFFFF/?text=${this.randomText()}`,
+          `https://via.placeholder.com/250x150/F77F00/FFFFFF/?text=${this.randomText()}`,
+          `https://via.placeholder.com/250x150/FCBF49/FFFFFF/?text=${this.randomText()}`,
+          `https://via.placeholder.com/250x150/EAE2B7/FFFFFF/?text=${this.randomText()}`,
         ]
       });
     }

@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, SimpleChanges } from '@angular/core';
 
 export interface Block {
   title: string;
@@ -28,8 +28,10 @@ export class BlockCarouselComponent {
 
   constructor() { }
 
-  ngOnChanges() {
-    this.updateSlides();
+  ngOnChanges(changes: SimpleChanges) {
+    if (changes.blocks || changes.blocksPerSlide) {
+      this.updateSlides();
+    }
   }
 
   currentIndexChanged(index: number) {
