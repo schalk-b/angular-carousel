@@ -1,0 +1,13 @@
+<div class="navigation">
+  <button [disabled]="backDisabled" class="back" (click)="back()">
+    <div class="arrow left"></div>
+  </button>
+  <button [disabled]="nextDisabled" class="next" (click)="next()">
+    <div class="arrow right"></div>
+  </button>
+</div>
+<div class="slides">
+  <div class="slides-inner" [ngStyle]="slidesStyle">
+    <ng-content></ng-content>
+  </div>
+</div>

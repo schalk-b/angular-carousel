@@ -1,0 +1,10 @@
+<app-carousel (currentIndexChanged)="currentIndexChanged($event)">
+  <app-carousel-slide *ngFor="let slide of slides">
+    <div class="blocks" *ngIf="slide.show">
+      <div class="block" *ngFor="let block of slide.blocks">
+        <img src="{{ block.imageUrl }}" />
+        <div class="title">{{ block.title }}</div>
+      </div>
+    </div>
+  </app-carousel-slide>
+</app-carousel>

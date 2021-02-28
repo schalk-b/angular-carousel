@@ -1,0 +1,19 @@
+.blocks {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.block {
+  position: relative;
+
+  .title {
+    position: absolute;
+    top: 30px;
+    color: white;
+    text-shadow: 1px 1px 3px rgb(0 0 0 / 29%), 2px 4px 7px rgb(73 64 125 / 35%);
+    font-size: 2rem;
+    text-align: center;
+    width: 100%;
+  }
+}
