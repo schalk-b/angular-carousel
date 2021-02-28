@@ -36,7 +36,7 @@ export class BlockCarouselComponent {
   ngOnChanges(changes: SimpleChanges) {
     if (changes.blocksPerSlide || changes.rows) {
       this.blocksStyle = {
-        'grid-template-columns': `repeat(${this.blocksPerSlide / this.rows}, 1fr)`,
+        'grid-template-columns': `repeat(${Math.ceil(this.blocksPerSlide / this.rows)}, 1fr)`,
         'grid-template-rows': `repeat(${this.rows}, 1fr)`
       }
     }
