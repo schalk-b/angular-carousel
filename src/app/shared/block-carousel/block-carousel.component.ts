@@ -22,13 +22,25 @@ export class BlockCarouselComponent {
 
   @Input() blocks: Block[] = [];
   @Input() blocksPerSlide = 4;
+  @Input() rows = 1;
 
   slides: Slide[] = [];
   index = 0;
+  blocksStyle = {
+    'grid-template-columns': 'repeat(4, 1fr)',
+    'grid-template-rows': 'repeat(1, 1fr)',
+  }
 
   constructor() { }
 
   ngOnChanges(changes: SimpleChanges) {
+    if (changes.blocksPerSlide || changes.rows) {
+      this.blocksStyle = {
+        'grid-template-columns': `repeat(${this.blocksPerSlide / this.rows}, 1fr)`,
+        'grid-template-rows': `repeat(${this.rows}, 1fr)`
+      }
+    }
+
     if (changes.blocks || changes.blocksPerSlide) {
       this.updateSlides();
     }
