@@ -11,6 +11,7 @@ export class CarouselComponent {
 
   @Output() currentIndexChanged = new EventEmitter<number>();
 
+  // We need to get the content children, so we can count the amount of slides
   @ContentChildren(CarouselSlideComponent) slides!: QueryList<CarouselSlideComponent>;
   
   currentIndex = 0;
