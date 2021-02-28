@@ -1,15 +1,5 @@
 # Considerations
-Performance
-    - 
-    - 
-
-Assumptions
-    -
-    -
-
-Questions
-    - Will all the images be the same size?
-    - 
+[Demo](https://schalk-b.github.io/angular-carousel/)
 
 # AngularCarousel
 
