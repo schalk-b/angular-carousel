@@ -16,17 +16,23 @@ export class BlockService {
   /* Uncomment to generate blocks randomly */
   getBlocks(): Observable<Block[]> {
     const amount = 16;
+    const width = 250;
+    const height = 150;
+    const textColor = 'FFFFFF';
+    const colors = [
+      '003049',
+      'D62828',
+      'F77F00',
+      '262626',
+      '255C99',
+      'BF452A',
+    ]
+
     const blocks: Block[] = [];
     for(let i = 1; i <= amount; i++) {
       blocks.push({
         title: `Block ${i}`,
-        images: [
-          `https://via.placeholder.com/250x150/003049/FFFFFF/?text=${this.randomText()}`,
-          `https://via.placeholder.com/250x150/D62828/FFFFFF/?text=${this.randomText()}`,
-          `https://via.placeholder.com/250x150/F77F00/FFFFFF/?text=${this.randomText()}`,
-          `https://via.placeholder.com/250x150/FCBF49/FFFFFF/?text=${this.randomText()}`,
-          `https://via.placeholder.com/250x150/EAE2B7/FFFFFF/?text=${this.randomText()}`,
-        ]
+        images: colors.map(color => `https://via.placeholder.com/${width}x${height}/${color}/${textColor}/?text=${this.randomText()}`),
       });
     }
 
