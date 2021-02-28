@@ -9,12 +9,12 @@ export class BlockService {
 
   constructor() { }
 
-  /*getBlocks(): Observable<Block[]> {
+  getBlocks(): Observable<Block[]> {
     return of(blockMockData);
-  }*/
+  }
 
   /* Uncomment to generate blocks randomly */
-  getBlocks(): Observable<Block[]> {
+  /*getBlocks(): Observable<Block[]> {
     const amount = 16;
     const width = 250;
     const height = 150;
@@ -41,7 +41,7 @@ export class BlockService {
   
   private randomText() {
     return Math.floor(Math.random() * 1000);
-  }
+  }*/
 }
 
 const blockMockData = [
